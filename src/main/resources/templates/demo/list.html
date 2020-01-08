@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>userid</th>
+            <th>userName</th>
+            <th>roleName</th>
+            <th>index</th>
+        </tr>
+        <tr th:each="user,status: ${users}">
+            <td th:text="${user.userid}">1</td>
+            <td th:text="${user.userName}">用户名称</td>
+            <td th:text="${user.role.roleName}">角色名称</td>
+            <td th:text="${status.index}">0</td>
+        </tr>
+    </table>
+
+    <!--<ul>-->
+        <!--<li th:each="user :${users}">-->
+            <!--<p th:if="${user.role != null}" th:text="${user.role.roleName}"></p>-->
+        <!--</li>-->
+        <!--<li>123</li>-->
+    <!--</ul>-->
+
+</body>
+</html>

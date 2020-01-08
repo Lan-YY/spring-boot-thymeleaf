@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a th:if="${flag =='yes'}" th:href="@{http://www.ykt.com}">if判断选择结构</a>
+    <a th:unless="${flag =='yes'}" th:href="@{http://www.jml.com}">unless选择结构</a>
+
+    <!-- switch 选择结构 -->
+    <div th:switch="${sex}"}>
+        <p th:case="woman">他是一个woman</p>
+        <p th:case="man">他是一个boy</p>
+        <p th:case="*">未知</p>
+    </div>
+
+</body>
+</html>

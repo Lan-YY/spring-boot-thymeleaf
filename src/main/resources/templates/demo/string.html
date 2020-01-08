@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>
+    <h1>基本对象</h1>
+    <!-- 操作request对象 -->
+    <p th:text="${#request.getAttribute('test')}"></p>
+
+<p th:text="${#request.getContextPath()}"></p>
+    <!-- 操作request作用域，不能用request.test操作-->
+    <p th:text="${test}"></p>
+    <p th:text="${test123}"></p>
+    <!-- 操作session对象 -->
+    <p th:text="${session.test}"></p>
+    <h1>Utility 对象</h1>
+    <!-- 格式当前时间-->
+    <p th:text="${#dates.format(date,'yyyy-MM-dd HH-mm:ss')}">2019-11-27 15:36:20</p>
+    <!-- 创建当前时间 -->
+    <p th:text="${#dates.createToday()}"}>此时时间</p>
+</body>
+</html>
