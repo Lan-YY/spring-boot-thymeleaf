@@ -65,6 +65,7 @@ public class ExampleController {
     @GetMapping(value = "/list")
     public String list(Model model){
         List<User> list = userService.findAllUsers();
+        System.out.println(list);
         model.addAttribute("users",list);
         return "demo/list";
     }
